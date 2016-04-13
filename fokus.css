@@ -37,13 +37,9 @@ button:hover {
 #run{
   margin-left: 20px
 }
-#run .ready{
-  background-color: red;
+#control{
+  padding-bottom:10px
 }
-#run .rebuild{
-  background-color: green;
-}
-
 .control-box{
   display:inline-block;
   padding-right:10px;
