@@ -1,0 +1,260 @@
+@import url(https://fonts.googleapis.com/css?family=Copse);
+
+*{
+  background-color: #F8F8F8;
+  font-family: 'Copse', serif
+}
+body{
+  padding-left:20px;
+}
+
+h1{
+  font-size: 2.8em;
+  color:#333;
+  text-shadow: 1px 1px #fff;
+  margin-bottom: 0px;
+  display: inline-block;
+  padding-right: 20px
+}
+a{
+  color:#00245B;
+}
+span{
+  font-size: 0.9em;
+}
+button {
+  font-size: 1em;
+  padding:6px;
+  color: white;
+  background-color: #777;
+  box-shadow: 1px 1px #555;
+  border: none;
+}
+button:hover {
+  background-color: #999;
+}
+
+#run{
+  margin-left: 20px
+}
+#run .ready{
+  background-color: red;
+}
+#run .rebuild{
+  background-color: green;
+}
+
+.control-box{
+  display:inline-block;
+  padding-right:10px;
+}
+
+/*
+  SELECT BOX
+*/
+select {
+  border: 2px solid #bbb;
+  width: 120px;
+  padding: 5px 8px;
+  font-size: 1em;
+  box-shadow: none;
+  background-color: transparent;
+  background-image: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+output {
+  border-radius: 3px;
+  width:100px;
+  color: #333;
+  font-size: 1em;
+}
+
+
+/*
+  FILE INPUT
+*/
+#input {
+  width: 0px;
+  height: 0px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+#input + label {
+  font-size: 1em;
+  padding:6px;
+  color: white;
+  background-color: #777;
+  display: inline-block;
+  box-shadow: 1px 1px #555;
+}
+#input:focus + label,
+#input + label:hover {
+  background-color: #999;
+}
+#input:focus + label {
+  outline: 1px dotted #000;
+  outline: -webkit-focus-ring-color auto 5px;
+}
+
+/*
+  CHECK BOX
+  Copied from
+  http://qiita.com/ryo620/items/a7941774469a6229a64a
+*/
+input[type=checkbox]{
+  display: none;
+}
+.checkbox {
+  box-sizing: border-box;
+  -webkit-transition: background-color 0.2s linear;
+  transition: background-color 0.2s linear; 
+  position: relative;
+  display: inline-block;
+  padding: 12px 12px 12px 42px;
+  border-radius: 8px;
+  background-color: #f6f7f8;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.checkbox:after {
+  -webkit-transition: border-color 0.2s linear;
+  transition: border-color 0.2s linear;
+  position: absolute;
+  top: 51%;
+  left: 15px;
+  display: block;
+  margin-top: -10px;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #bbb;
+  border-radius: 6px;
+  content: '';
+}
+
+.checkbox:before {
+  -webkit-transition: opacity 0.2s linear;
+  transition: opacity 0.2s linear;
+  position: absolute;
+  top: 51%;
+  left: 21px;
+  display: block;
+  margin-top: -7px;
+  width: 5px;
+  height: 9px;
+  border-right: 3px solid #606670;
+  border-bottom: 3px solid #606670;
+  content: '';
+  opacity: 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+input[type=checkbox]:checked + .checkbox:before {
+  opacity: 1;
+}
+
+
+/*
+  INPUT RANGE
+  Copied from
+  http://codepen.io/jasonwoan/pen/HcgxB
+*/
+.slider{
+  display: inline-block;
+  width:180px;
+}
+
+.range {
+  -webkit-appearance: none;
+  vertical-align: middle;
+  outline: none;
+  border: none;
+  padding: 0;
+  background: none;
+}
+
+.range::-webkit-slider-runnable-track {
+  background-color: #d7dbdd;
+  height: 6px;
+  border-radius: 3px;
+  border: 1px solid transparent;
+}
+
+.range::-moz-range-track {
+  background-color: #d7dbdd;
+  height: 6px;
+  border-radius: 3px;
+  border: none;
+}
+
+.range::-ms-track {
+  color: transparent;
+  border: none;
+  background: none;
+  height: 6px;
+}
+
+.range::-ms-fill-lower {
+  background-color: #d7dbdd;
+  border-radius: 3px;
+}
+
+.range::-ms-fill-upper {
+  background-color: #d7dbdd;
+  border-radius: 3px;
+}
+
+.range::-ms-tooltip {
+  display: none;
+  /* display and visibility only */
+}
+
+.range::-moz-range-thumb {
+  border-radius: 20px;
+  height: 18px;
+  width: 18px;
+  border: none;
+  background: none;
+  background-color: #606670;
+}
+
+.range:active::-moz-range-thumb {
+  outline: none;
+}
+
+.range::-webkit-slider-thumb {
+  -webkit-appearance: none !important;
+  border-radius: 100%;
+  background-color: #606670;
+  height: 18px;
+  width: 18px;
+  margin-top: -7px;
+}
+
+.range[disabled]::-webkit-slider-thumb {
+  background-color: transparent;
+  border: 1px solid #d7dbdd;
+}
+
+.range:active::-webkit-slider-thumb {
+  outline: none;
+}
+
+.range::-ms-thumb {
+  border-radius: 100%;
+  background-color: #606670;
+  height: 18px;
+  width: 18px;
+  border: none;
+}
+
+.range:active::-ms-thumb {
+  border: none;
+}
+

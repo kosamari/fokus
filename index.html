@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>fokus</title>
+  <link href='fokus.css' rel='stylesheet' type='text/css'>
+  <meta name="description" content="Simple way to create focused image.">
+</head>
+<body>
+  <h1>fokus.</h1>
+  <span>Simple way to create focused image</span>
+  <p>Select an Image, click on 2 points on the image to create focus area, then click Process Image.<br> Made by <a href="https://twitter.com/kosamari">@kosamari</a>. Code on <a href="https://github.com/kosamari/fokus">github</a>. Inspired by <a href="http://alicebartlett.co.uk/blog/how-to-do-ok-at-slides">Alice Bartlett's blog post</a>.</p>
+
+  <div id="control">
+    <div class="control-box">
+      <input type="file" name="file" id="input" accept="image/*">
+      <label for="input">Choose an Image</label>
+      <button type="" id="run">Process Image</button>
+    </div>
+
+    <div class="control-box">
+      <input type="checkbox" id="blur">
+      <label for="blur" class="checkbox">blur</label>
+      <div class="slider">
+        <input id="level" class="range" type="range" min="-255" max="255" value="-40" step="1" onmousemove="rangevalue.value=value" />
+        <output id="rangevalue"></output>
+       </div>
+    </div>
+
+    <div class="control-box">
+      <select id="file" name="select">
+        <option value="image/png">PNG</option>
+        <option value="image/jpeg">JPEG</option>
+        <option value="image/gif">GIF</option>
+      </select>
+      <button id="download">Download</button>
+      <a id="a" hidden></a>
+    </div>
+  </div>
+
+  <canvas id='canvas'></canvas>
+  <canvas id='canvas-ref' hidden></canvas>
+
+  <script src="fokus.js" type="text/javascript"></script>
+</body>
+</html>
